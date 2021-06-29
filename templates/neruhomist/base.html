@@ -92,7 +92,9 @@
           <ul class="list-unstyled">
             {% if pages %}
             {% for page in pages %}
+              {% if page.information %}
             <li><a href="{% url 'property:page' page.id %}" class="py-1 d-block">{{page}}</a></li>
+              {% endif %}
             {% endfor %}
           {% endif %}
           </ul>
@@ -100,10 +102,13 @@
         <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
           <h2 class="footer-heading">Про нас</h2>
           <ul class="list-unstyled">
-            <li><a href="#" class="py-1 d-block">Map Direction</a></li>
-            <li><a href="#" class="py-1 d-block">Accomodation Services</a></li>
-            <li><a href="#" class="py-1 d-block">Great Experience</a></li>
-            <li><a href="#" class="py-1 d-block">Perfect central location</a></li>
+            {% if pages %}
+            {% for page in pages %}
+              {% if page.about_as %}
+            <li><a href="{% url 'property:page' page.id %}" class="py-1 d-block">{{page}}</a></li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
           </ul>
         </div>
         <div class="col-md-6 col-lg-3 mb-md-0 mb-4">

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <title> Image Gallery with Fullscreen Option | RoyalSlider</title>
+
+
+    <meta content="Touch-enabled image gallery and content slider plugin, that focuses on providing great user experience on every desktop and mobile device." name="description">
+    <meta name="keywords" content="content slider, gallery, plugin, jquery, banner rotator">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="Dmitry Semenov">
+
+
+    <link href="/plugins/royal-slider/royalslider/royalslider.css" rel="stylesheet">
+    <script src="/plugins/royal-slider/royalslider/jquery-1.8.3.min.js"></script>
+
+        <script src="/plugins/royal-slider/royalslider/jquery.royalslider.min.js?v=9.3.6"></script>
+
+
+
+
+    <link href="/plugins/royal-slider/preview-assets/css/reset.css?v=1.0.4" rel="stylesheet">
+
+
+        <link href="/plugins/royal-slider/royalslider/skins/default/rs-default.css?v=1.0.4" rel="stylesheet">
+
+
+
+
+    <style>
+      #gallery-1 {
+  width: 100%;
+  height:627px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.royalSlider > .rsImg {
+  visibility:hidden;
+}
+.royalSlider img {
+}
+.rsWebkit3d .rsSlide {
+    -webkit-transform: none;
+}
+.rsWebkit3d img {
+    -webkit-transform: translateZ(0);
+}
+
+    </style>
+
+  </head>
+  <body >
+  <header  id="main-header" class="clearfix">
+    <div  class="page wrapper">
+       <div class="col span_6">
+         <a id="logo" href="/plugins/royal-slider">Royal&thinsp;Slider</a>
+         <nav>
+            <a
+                  class=""
+
+            href="/plugins/royal-slider/templates">Templates<span class="templates-count">11</span></a>
+            <a
+                  class=""
+
+                href="/plugins/royal-slider/faq">FAQ</a>
+            <a
+                  class=""
+                 href="/plugins/royal-slider/wordpress">WordPress Version</a>
+         </nav>
+          <a id="buy-slider" href="/plugins/royal-slider/pricing">Get this slider plugin &#9656;</a>
+       </div>
+    </div>
+  </header>
+  <div  class="page wrapper main-wrapper">
+      <div class="row clearfix">
+    <div id="page-navigation" class="col span_6">
+
+        <div class="left page-nav-item">
+
+                <a href="/plugins/royal-slider/video-gallery/" title="Next Example:
+Video Gallery"> ← Video Gallery</a>
+
+        </div>
+
+
+        <div class="right page-nav-item">
+                <a href="/plugins/royal-slider/visible-nearby/" title="Previous Example:
+Gallery with Visible Nearby Images">Gallery with Visible Nearby Images → </a>
+        </div>
+
+
+	</div>
+</div>
+<div class="row clearfix">
+   <div class="col span_2 example-info">
+    <h2>Gallery with fullscreen</h2>
+    <p>Automatically loads larger images in fullscreen, uses native browser fullscreen (if supported, it may be disabled).</p>
+    <p>Keyboard arrow navigation is automatically added when fullscreen is entered (but you may enable it for normal state too).</p>
+    <p>Thumbnails are dynamically resized via media queries on smaller screen size.</p>
+    <p>Gallery keeps only a few images in DOM to save memory.</p>
+    <!-- <a class="wp-how-to-video" href="http://youtu.be/S-VJs_cmjwU">See video about how to create such gallery in WordPress version</a> -->
+  </div>
+<div class="col span_4 fwImage">
+  <div id="gallery-1" class="royalSlider rsDefault">
+    <a class="rsImg" data-rsw="400" data-rsh="500"  data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/1.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/1.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/1.jpg" /></a>
+    <a class="rsImg" data-rsw="632" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/2.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/2.jpg">Vincent van Gogh - The Starry Night<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/2.jpg" /></a>
+    <a class="rsImg" data-rsw="336" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/3.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/3.jpg">Leonardo da Vinci - Mona Lisa<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/3.jpg" /></a>
+    <a class="rsImg" data-rsw="417" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/4.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/4.jpg">Grant DeVolson Wood - American Gothic<img width="96" height="72" class="rsTmb" src="/plugins/royal-slider/img/paintings/t/4.jpg" /></a>
+    <a class="rsImg" data-rsw="601" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/5.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/5.jpg">Rembrandt - The Night Watch<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/5.jpg" /></a>
+    <a class="rsImg" data-rsw="350" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/6.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/6.jpg">Johannes Vermeer - Girl with a Pearl Earring<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/6.jpg" /></a>
+    <a class="rsImg" data-rsw="596" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/7.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/7.jpg">Paul Cezanne - Card Players<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/7.jpg" /></a>
+    <a class="rsImg" data-rsw="700" data-rsh="414" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/8.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/8.jpg">Ilya Repin - Reply of the Zaporozhian Cossacks<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/8.jpg" /></a>
+    <a class="rsImg" data-rsw="470" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/9.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/9.jpg">Ivan Aivazovsky - Chesmabattle<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/9.jpg" /></a>
+    <a class="rsImg" data-rsw="500" data-rsh="500" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/10.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/10.jpg">Gustav Klimt - The Kiss<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/10.jpg" /></a>
+     <a class="rsImg" data-rsw="700" data-rsh="475" data-rsBigImg="http://dimsemenov.com/plugins/royal-slider/img/paintings/11.jpg" href="http://dimsemenov.com/plugins/royal-slider/img/paintings/700x500/11.jpg">Ivan Shishkin - Morning in a Pine Forest<img width="96" height="72" class="rsTmb" src="http://dimsemenov.com/plugins/royal-slider/img/paintings/t/11.jpg" /></a>
+  </div>
+</div>
+</div>
+
+  </div>
+  <div class="wrapper page">
+     <footer class="row clearfix" id="main-footer">
+    <div class="col span_6">
+      <nav><a href="http://dimsemenov.com/subscribe.html">Email Newsletter</a><a href="http://twitter.com/dimsemenov">Twitter</a><a href="/plugins/royal-slider/documentation">Documentation</a><a href="/plugins/royal-slider/pricing">Pricing</a></nav>
+      <p class="copy">© <a href="http://dimsemenov.com">Dmitry Semenov</a></p>
+    </div>
+  </footer>
+
+    <script>
+      jQuery(document).ready(function($) {
+
+
+  $('#gallery-1').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'thumbnails',
+    autoScaleSlider: true,
+    autoScaleSliderWidth: 960,
+    autoScaleSliderHeight: 850,
+    loop: false,
+    imageScaleMode: 'fit-if-smaller',
+    navigateByClick: true,
+    numImagesToPreload:2,
+    arrowsNav:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      appendSpan: true,
+      firstMargin: true,
+      paddingBottom: 4
+    }
+  });
+
+    $('.rsContainer').on('touchmove touchend', function(){});
+
+});
+
+    </script>
+
+
+
+  <div style="display:none;"><script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25969065-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    function recordOutboundLink(link, category, action) {
+      _gat._getTrackerByName()._trackEvent(category, action);
+      setTimeout('document.location = "' + link.href + '"', 100);
+    }
+</script>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+{% extends "neruhomist/base.html" %}
+{% load static %}
+{% block title %}{{settings.title}}{% endblock %}
+{% block meta_description %}{{settings.meta_description}}{% endblock %}
+{% block og_title %}{{settings.title}}{% endblock %}
+{% block site_name %}{{settings.title}}{% endblock %}
+{% block base_url %}{{base_url}}{% endblock %}
+{% block og_logo %}{{base_url}}/static/logo.png{% endblock %}
+{% block og_description %}{{settings.meta_description}}{% endblock %}
+{% block content %}
+<!-- image site -->
+    <div class="hero-wrap js-fullheight" style="background-image: url('{{settings.site_image.url}}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true"></div>
+      </div>
+    </div>
+<!-- END -->
+<!-- search -->
+    <section class="ftco-section ftco-book ftco-no-pt ftco-no-pb">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-lg-4">
+            <form action="#" class="appointment-form">
+              {% csrf_token %}
+              <!--<h3 class="mb-3">Пошук нерухомості</h3>-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Full Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-wrap">
+                      <div class="icon"><span class="ion-md-calendar"></span></div>
+                      <input type="text" class="form-control appointment_date-check-in" placeholder="Check-In">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-wrap">
+                      <div class="icon"><span class="ion-md-calendar"></span></div>
+                      <input type="text" class="form-control appointment_date-check-out" placeholder="Check-Out">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                        <select name="" id="" class="form-control">
+                          <option value="">Adults</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                        <select name="" id="" class="form-control">
+                          <option value="">Children</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Phone number">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-wrap">
+                      <div class="icon"><span class="ion-ios-clock"></span></div>
+                      <input type="text" class="form-control appointment_time" placeholder="Time">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="submit" value="Book Appartment Now" class="btn btn-primary py-3 px-4">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END -->
+<!-- Categories -->
+    <section class="ftco-section ftco-services bg-light">
+    	<div class="container">
+    		<div class="row">
+        {% for category in categories %}
+          <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block services-wrap text-center">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{{category.image.url}}" alt="">
+                <div class="overlay">
+                   <h2>{{ category.title }}</h2>
+                   <a class="info" href="{% url 'property:category' category.id %}">Дивитись</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+    	</div>
+    </section>
+<!-- END Categories-->
+<!-- slider recommended objects -->
+<section class="ftco-section testimony-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center pb-5 mb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h3>Нерухомість онлайн РЕКОМЕНДУЄ</h3>
+      </div>
+    </div>
+    <div class="row ftco-animate">
+      <div class="col-md-12">
+        <div class="carousel-testimony owl-carousel">
+
+          {% for r in recommended %}
+          <div class="item ">
+<div class="testimony-wrap d-flex">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{{r.image.url}}" alt="">
+                <p>{{r.title}}</p>
+                <div class="overlay">
+                   <a class="info" href="{% url 'property:object' r.id %}">Дивитись</a>
+                </div>
+            </div>
+
+</div>
+
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END -->
+{% endblock %}

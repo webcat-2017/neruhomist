@@ -114,10 +114,27 @@
         <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
           <h2 class="footer-heading">Контакти</h2>
           <ul class="list-unstyled">
-            <li><a href="#" class="py-1 d-block">Map Direction</a></li>
-            <li><a href="#" class="py-1 d-block">Accomodation Services</a></li>
-            <li><a href="#" class="py-1 d-block">Great Experience</a></li>
-            <li><a href="#" class="py-1 d-block">Perfect central location</a></li>
+            {% if settings.work_schedule %}
+              <li><span>{{settings.work_schedule}}</span></li>
+            {% endif %}
+            {% if settings.phone_1 %}
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:{{settings.phone_1.phone}}">{{settings.phone_1.phone}}</a></li>
+            {% endif %}
+            {% if settings.phone_2 %}
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:{{settings.phone_2.phone}}">{{settings.phone_2.phone}}</a></li>
+            {% endif %}
+            {% if settings.phone_3 %}
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:{{settings.phone_3.phone}}">{{settings.phone_3.phone}}</a></li>
+            {% endif %}
+            {% if settings.phone_4 %}
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:{{settings.phone_4.phone}}">{{settings.phone_4.phone}}</a></li>
+            {% endif %}
+            {% if settings.email_1 %}
+              <li><span><i class="fa fa-envelope-o" aria-hidden="true"></i>{{settings.email_1}}</span></li>
+            {% endif %}
+            {% if settings.email_2 %}
+              <li><span><i class="fa fa-envelope-o" aria-hidden="true"></i>{{settings.email_2}}</span></li>
+            {% endif %}
           </ul>
         </div>
         <div class="col-md-6 col-lg-3 mb-md-0 mb-4">

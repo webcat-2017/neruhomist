@@ -6627,7 +6627,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important; }
+  padding-top: 1rem !important; }
 
 .pr-5,
 .px-5 {
@@ -8051,7 +8051,7 @@ h1, h2, h3, h4, h5,
 
   }
 
-.fa-phone, .fa-envelope-o {
+.fa-phone, .fa-envelope-o, .fa-clock-o {
   padding-right: 5px;
 }
 .wrap {
@@ -8749,9 +8749,11 @@ footer {
   .footer .footer-heading {
     font-size: 20px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 500;
-    font-family: "Poppins", Arial, sans-serif; }
+    border-bottom: solid 2px #fd7792;
+    font-family: "Poppins", Arial, sans-serif;
+    width: 90%;}
     .footer .footer-heading .logo {
       color: #fff; }
   .footer p {
@@ -8819,7 +8821,10 @@ footer {
       .footer .subscribe-form .form-group .submit:hover, .footer .subscribe-form .form-group .submit:focus {
         text-decoration: none !important;
         outline: none !important; }
-  .footer .copyright a {
+.footer .row div {
+  margin: 0 auto;
+}
+.footer .copyright a {
     color: rgba(255, 255, 255, 0.5); }
 
 .ftco-footer-social li {

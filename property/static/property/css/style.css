@@ -9557,6 +9557,9 @@ footer {
   .hovereffect:hover a.info {
     padding: 62px 70px;
   }
+  .copyright {
+    font-size: 12px;
+  }
 }
   @media (max-width: 640px) {
   .services {

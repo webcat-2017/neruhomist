@@ -55,3 +55,11 @@ def page(request, page_id):
     context = dict()
     context['page'] = p
     return render(request, 'neruhomist/page.html', context)
+
+def search(request):
+
+    context = dict()
+    context['data'] = 'search data'
+
+    return render(request, 'neruhomist/search.html', context)
+

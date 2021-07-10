@@ -1,10 +1,23 @@
-from .models import Setting, Category, Page
+from .models import *
 
 def settings(request):
+
+    context = dict()
 
     settings = Setting().getSettings()
 
     categories = Category.objects.order_by('id')
     pages = Page.objects.filter(status=True)
 
-    return {'categories': categories, 'settings': settings, 'base_url': settings.base_url, 'pages': pages}
+    object_type = ObjectProperty.object_type
+    context['categories'] = categories
+    context['settings'] = settings
+    context['base_url'] = settings.base_url
+    context['pages'] = pages
+    context['object_type'] = (
+            'Квартира',
+            'Будинок',
+            'Земельна ділянка',
+            'Дачний масив',
+            'Комерційна нерухомість')
+    return context

@@ -26,8 +26,20 @@
               <!--<h3 class="mb-3">Пошук нерухомості</h3>-->
               <div class="row">
                 <div class="col-md-12">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Full Name">
+                   <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                        <select name="" id="ot" class="form-control">
+                          <option value="">Тип Об'єкту:</option>
+                          {% if object_type %}
+                              {% for type in object_type %}
+                                  <option value="{{ type }}">{{ type }}</option>
+                              {% endfor %}
+                          {% endif %}
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -95,7 +107,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="submit" value="Book Appartment Now" class="btn btn-primary py-3 px-4">
+                    <input type="submit" value="Знайти" class="btn btn-primary py-3 px-4">
                   </div>
                 </div>
               </div>

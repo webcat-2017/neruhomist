@@ -183,6 +183,22 @@
   <script src="{% static 'property/js/scrollax.min.js'%}"></script>
   <script src="{% static 'property/js/google-map.js'%}"></script>
   {% endcompress %}
+   <script>
+  $("#ot").click(function () {
+      $(this).change(function () {
+          $.ajax(function () {
+            url: {% url 'property:search' %} ,
+            data: {json: jsondata},
+            contentType: "application/json",
+            success: function(data) {
+                alert(JSON.stringify(data);)
+              }
+          });
+
+      });
+
+                });
+  </script>
   <script src="{% static 'property/js/main.js'%}"></script>
 {% block js %}{% endblock %}
 
